@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Meeting Price - A Meeting Price Calculator - Find Out What This Meeting Costs</title>
+		<link rel="stylesheet" href="css/stylesheet.css">
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	</head>
+	<body>
+		
+		<!--via https://github.com/blog/273-github-ribbons-->
+		<a href="http://github.com/cancelbubble"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/abad93f42020b733148435e2cd92ce15c542d320/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub"></a>
+		
+
+		<div id="shell">
+			<em id="dude"><img id="shhh" src="images/cleardot.gif" width="10" height="10" border="0" alt=""></em>
+			<em id="chick"></em>
+			<div id="output"></div>
+			
+			<h1 id="header">Meeting Price - A Meeting Cost Calculator</h1>
+			<h4 id="subhead">Find Out What This Meeting Costs</h4>
+
+			<form id="meeting_form">
+				<div id="input" class="clearfix">
+					<p>
+						<label>Number of people in this meeting:</label>
+						<input type="text" class="userinput" size="11" name="number_of_people" placeholder="5" autofocus>
+						<span id="number_of_people_error">Please enter the number of people in your meeting.</span>
+					</p>
+					<p>
+						<label class="twolines">Annual average salary for every person: <em>(USD format, i.e., $50,000)</em></label>
+						<input type="text" class="userinput" size="11" name="annual_salary" placeholder="$50,000">
+						<span id="annual_salary_error">Please enter the annual average salary for every person.</span>
+					</p>
+				</div>
+
+				<p id="duration">Meeting duration: <input type="text" size="5" id="duration_time" name="timer_passed" value="0:00:00" readonly="readonly"><br>
+				and has cost the company around:</p>
+
+				<input type="hidden" name="startsec">
+				<input id="cost_output" class="bigdisplay" type="text" name="cost" readonly="readonly" value="$0.00">
+				
+				<input type="button" class="timerbutton disabled" name="start" value="Start" disabled="disabled">
+				<input type="button" class="timerbutton disabled" name="stop" value="Stop" disabled="disabled">
+				<input type="button" class="timerbutton reset disabled" name="reset" value="Reset" disabled="disabled">
+			</form>
+		</div>
+
+		<ol>
+			<li>Enter the number of people in your meeting.</li>
+			<li>Enter the annual average salary for every person (just make a best guess).  For example, for a meeting with Hotshot Harry, who makes $100,000 and Lowly Larry, who makes $50,000.  You'd enter $75,000.</li>
+			<li>Click the <strong>Start</strong> button!  Leave this running in a browser tab throughout your meeting.  At the end of your meeting, click the <strong>Stop</strong> button.</li>
+			<li class="copyright">&copy; 2008 - <?php echo date('Y'); ?> Matt Hickerson (someone who hates stupid meetings)</li>
+			<li class="stumbleupon"><a href="http://www.stumbleupon.com/submit?url=http://www.meetingprice.com" target="new"> <img border="0" src="http://cdn.stumble-upon.com/images/120x20_su_white.gif" alt=""></a></li>
+		</ol>
+
+	
+
+	<script src="scripts/yayMeetings.js"></script>
+	
+	<!--[if lte IE 8]>
+		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+		<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+	<![endif]-->
+
+
+	</body>
+</html>
